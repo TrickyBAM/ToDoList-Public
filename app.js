@@ -1,4 +1,4 @@
-// Full JavaScript for Shared To-Do List App with Firebase integration
+// Full JavaScript for Shared To-Do List App with Firebase Integration
 
 // Connect to Firebase Realtime Database
 const db = firebase.database();
