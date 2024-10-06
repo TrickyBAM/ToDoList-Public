@@ -1,19 +1,35 @@
-<!-- Add Firebase SDKs -->
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <!-- Firebase configuration -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCKl2rW_1V5zo2AOc6m7WE-nyXHDbaiaBc",
+            authDomain: "todolist-ea49a.firebaseapp.com",
+            databaseURL: "https://todolist-ea49a-default-rtdb.firebaseio.com",
+            projectId: "todolist-ea49a",
+            storageBucket: "todolist-ea49a.appspot.com",
+            messagingSenderId: "735543643972",
+            appId: "1:735543643972:web:d4ba8bab7252cbd25c1111",
+            measurementId: "G-VZ04Z3QQ58"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <h1>Our To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Add a new task...">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
 
-<!-- Your Firebase configuration -->
-<script>
-    const firebaseConfig = {
-        apiKey: "AIzaSyCKl2rW_1V5zo2AOc6m7WE-nyXHDbaiaBc",
-        authDomain: "todolist-ea49a.firebaseapp.com",
-        databaseURL: "https://todolist-ea49a-default-rtdb.firebaseio.com",
-        projectId: "todolist-ea49a",
-        storageBucket: "todolist-ea49a.appspot.com",
-        messagingSenderId: "735543643972",
-        appId: "1:735543643972:web:d4ba8bab7252cbd25c1111",
-        measurementId: "G-VZ04Z3QQ58"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-</script>
+    <script src="app.js"></script>
+</body>
+</html>
