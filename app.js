@@ -1,3 +1,5 @@
+// Full JavaScript for Shared To-Do List App with Firebase integration
+
 // Connect to Firebase Realtime Database
 const db = firebase.database();
 
@@ -18,7 +20,7 @@ function addTask() {
 // Listen for real-time updates
 db.ref('tasks').on('value', (snapshot) => {
     const taskList = document.getElementById('taskList');
-    taskList.innerHTML = '';
+    taskList.innerHTML = ''; // Clear existing tasks
     snapshot.forEach((taskSnapshot) => {
         const taskData = taskSnapshot.val();
         const li = document.createElement('li');
